@@ -13,8 +13,8 @@ export default function MovieCard({
 	rating,
 }) {
 	return (
-		<Card sx={{ maxWidth: 350 }} className="pt-4">
-			<CardActionArea>
+		<Card sx={{ maxWidth: 360 }} className="pt-4 mb-0">
+			<CardActionArea className="mb-0 h-full">
 				<div className="w-full h-[350px] blur-sm opacity-90">
 					<img
 						src={posterUrl}
@@ -28,20 +28,25 @@ export default function MovieCard({
 					alt={title + id}
 				/>
 
-				<CardContent>
-					<Typography
-						gutterBottom
-						variant="h6"
-						component="div"
-						className="text-emerald-700 font-poppings font-medium"
-					>
-						{title}
-					</Typography>
-					<Typography variant="body2" color="text.secondary">
-						{description}
-					</Typography>
-					<div className="pt-3">
-						<Rating name="read-only" value={rating} readOnly />
+				<CardContent className="md:h-[300px]">
+					<div className="flex flex-col justify-between h-full">
+						<div>
+							<Typography
+								gutterBottom
+								variant="h6"
+								component="div"
+								className="text-emerald-700 text-[17px] font-poppings font-bold"
+							>
+								{title}
+							</Typography>
+							<Typography variant="body2" color="text.secondary">
+								{description}
+							</Typography>
+						</div>
+
+						<div className="pt-3">
+							<Rating name="read-only" value={rating} readOnly />
+						</div>
 					</div>
 				</CardContent>
 			</CardActionArea>
