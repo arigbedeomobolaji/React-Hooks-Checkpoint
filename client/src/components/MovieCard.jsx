@@ -28,7 +28,7 @@ export default function MovieCard({
 					alt={title + id}
 				/>
 
-				<CardContent className="md:h-[300px]">
+				<CardContent className="md:h-[275px]">
 					<div className="flex flex-col justify-between h-full">
 						<div>
 							<Typography

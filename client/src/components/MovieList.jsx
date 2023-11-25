@@ -13,7 +13,7 @@ function MovieList() {
 
 	return (
 		<div className="flex flex-col pb-5">
-			<div className="max-w-7xl mx-3 my-5 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-start md:justify-items-center">
+			<div className="max-w-7xl mx-3 my-5 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-start md:justify-items-center">
 				{movies.map((movie) => (
 					<MovieCard {...movie} key={movie.id} />
 				))}
